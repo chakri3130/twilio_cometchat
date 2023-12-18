@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { Platform, ToastController } from '@ionic/angular';
 import { CometChat } from "@cometchat-pro/cordova-ionic-chat";
-import { FCM } from "cordova-plugin-fcm-with-dependecy-updated/ionic/ngx";
+import { FCM } from 'cordova-plugin-fcm-with-dependecy-updated/ionic/ngx';
 import { Router, NavigationExtras } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -12,15 +13,12 @@ import { Router, NavigationExtras } from '@angular/router';
 export class AppComponent {
   appID = "24895648347f7602";
   region = "IN";
-  isPlatformReady: boolean = false;
   constructor(private platform: Platform, private fcm: FCM, private router: Router, private toastController: ToastController) {
     this.initialzeapp();
   }
   initialzeapp() {
     this.platform.ready().then(async () => {
       console.log('platform ready');
-      this.isPlatformReady = true
-      this.OneSignalInit();
 
       var appSetting = new CometChat.AppSettingsBuilder()
         .subscribePresenceForAllUsers()
@@ -39,6 +37,7 @@ export class AppComponent {
               } else {
                 this.fcm.getToken().then(async (token) => {
                   console.log("registred device token", token);
+                  // if (token != '' || token != undefined) {
                   localStorage.setItem("fcmdeviceToken", token);
                   this.fcm
                     .createNotificationChannel({
@@ -47,7 +46,7 @@ export class AppComponent {
                       importance: "high",
                       sound: "msgtone",
                     })
-                    .then((result) => {
+                    .then((result: any) => {
                       console.log("channel registred");
                     });
                   await CometChat.registerTokenForPushNotification(token).then(
@@ -56,11 +55,11 @@ export class AppComponent {
                     }
                   );
 
-
+                  // }
                 });
               }
             })
-            .catch((error) => {
+            .catch((error: any) => {
               console.log(error);
               localStorage.setItem("ispusnotoficationRejected", "true");
             });
@@ -126,7 +125,6 @@ export class AppComponent {
               if (this.platform.is("ios")) {
 
               } else {
-
                 this.PushNotificationforCometChat(
                   "New message received from " + data.title,
                   data
@@ -140,18 +138,6 @@ export class AppComponent {
 
 
 
-  }
-
-
-
-
-
-
-  OneSignalInit() {
-    // OneSignal.initialize("902422ca-3061-4fbe-86de-57879e4df851");
-    // OneSignal.Notifications.requestPermission(true).then((accepted: boolean) => {
-    //   console.log("User accepted notifications: " + accepted);
-    // });
   }
 
   async PushNotificationforCometChat(title: any, cometChatNotification: any) {
@@ -185,9 +171,6 @@ export class AppComponent {
     });
     toast.present();
   }
-
-
-
 
 
 
