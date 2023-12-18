@@ -1,0 +1,381 @@
+// .chat-ui-page{
+//     .mb-10 {
+//         margin:0 10px;
+//     }
+//     .chat-ui-grid{
+//         margin-bottom: 50px;
+//     }
+//     .user_png{
+//         img{
+//             width: 55px;
+//             height: 55px;
+//             background: transparent;
+//             border-radius: 50%;
+//             border: 2px solid #235aa8;
+//         }
+//     }
+//     .chat_text_right{
+//         text-align: left;
+//         margin-left: 0px;
+//         .left_chat_div{
+//             margin-left: 5px;
+//             display: block;
+//             text-align: left;
+//         }
+//             .chat_box{
+//                 margin: 0;
+//                 //background: red;
+//                 padding:8px 10px;
+//                 border-radius: 5px;
+//                 -webkit-filter: drop-shadow(0px 1px 3px rgba(54,54,54, 0.5));
+//                 filter: drop-shadow(0px 1px 3px rgba(54,54,54, 0.5));
+//                 background: #ededed;
+//                 line-height: 19px;
+//                 margin-right: 20%;
+//                 display: inline-block;
+//                 text-align: left;
+//                 width: 100%;
+//                 margin-right:8px;
+//                 .user_name {
+//                     font-size: 12px;
+//                     margin: 0px;
+//                     color: grey;
+//                     font-style:italic;
+//                     ;
+//                 }
+//                 .user_msg{
+//                     font-size: 15px;
+//                     margin: 3px 0px;
+//                 }
+//                 .user_time{
+//                      font-size: 12px;
+//                      margin: 0px;
+//                      color: grey;
+//                      font-style:italic;
+//                 }
+//             }
+
+//     }
+//     .chat_text_left{
+//         text-align: right;
+//         // margin-left: 20px;
+//         .right_chat_div{
+//             margin-right: 5px;
+//             display: block;
+//             text-align: right;
+//         }
+//           .chat_box{ 
+//                 margin: 0;
+//                 //background: red;
+//                 padding: 8px 10px;
+//                 border-radius: 5px;
+//                 width: 100%;
+//                 -webkit-filter: drop-shadow(0px 1px 3px rgba(54,54,54, 0.5));
+//                 filter: drop-shadow(0px 1px 3px rgba(54,54,54, 0.5));
+//                 background: #ededed;
+//                 line-height: 19px;
+//                 display: inline-block;
+//                 text-align:left;
+//                 margin-right:8px;
+//                 .user_name {
+//                     font-size: 12px;
+//                     margin: 0px;
+//                     color: grey;
+//                     font-style:italic;
+//                 }
+
+//                 .user_msg {
+//                     font-size: 15px;
+//                     margin: 3px 0px;
+//                 }
+
+//                 .user_time {
+//                      font-size: 12px;
+//                      margin: 0px;
+//                      color: grey;
+//                      font-style:italic;
+//                 }
+//             }
+
+
+//     }
+
+
+//     .chat_footer {
+//         position: fixed;
+//         bottom: 0;
+//         background: #f2f2f2;
+//         width: 100%;
+//         .chat_input{
+//             border-right: 1px solid #717171;
+//         }
+//         .chat_send{
+
+//             ion-icon {
+//                 text-align: center;
+//                 margin: 11px auto;
+//                 display: block;
+//             }
+//         }
+//     }
+// }
+//   .chat_send {
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       border-left: 1px solid #d2d2d2;
+//       padding: 0px;
+//   }
+
+
+.active_header {
+    padding: 8px;
+}
+
+ion-avatar {
+    max-width: 25px;
+    max-height: 25px;
+}
+
+.circular {
+    width: 24px;
+    height: 24px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.Inline {
+
+    display: inline-flex;
+    vertical-align: middle;
+
+}
+
+.chat-box-container {
+    // position: fixed;
+    bottom: 2px;
+    display: inline-flex;
+    padding: 0 7px 0 0px;
+    background: white;
+    width: 100%;
+    margin: 2px 0px;
+}
+
+.chat-editor-box {
+    display: inline-flex;
+    justify-items: center;
+    background: white;
+    align-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 24px;
+    padding-left: 4px !important;
+    font-size: 14px;
+    min-height: 38px;
+    max-height: 100px;
+}
+
+
+.btnSendChatView,
+.btnAttachMediaView {
+    height: 38px;
+    width: 38px;
+    margin-left: 4px;
+    background: #2636be;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+.btnSendChat,
+.btnAttachMedia {
+    height: 24px;
+    width: 24px;
+}
+
+.chat {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    margin: 0.2em 0;
+    padding: 0.5em;
+    max-width: 70%;
+}
+
+.me {
+    align-self: flex-start;
+    color: black;
+    border-radius: 10px 10px 10px 0px;
+
+    img {
+        height: 150px;
+        width: 150px;
+    }
+
+    h5 {
+        background-color: #F1F0F0;
+        margin: 0.2em 0;
+        padding: 0.5em;
+        /* max-width: 70%; */
+        border-radius: 10px;
+        font-size: 16px;
+        color: black;
+    }
+
+    p {
+        margin: 0px;
+        padding: 0.2em;
+        border-radius: 10px;
+        font-size: 16px;
+        text-align: left;
+        color: black;
+    }
+}
+
+.you {
+    align-self: flex-end;
+
+
+    border-radius: 10px 10px 0px 10px;
+    display: inline-block;
+    margin-right: 13px;
+
+    img {
+        height: 150px;
+        width: 150px;
+    }
+
+    h5 {
+        background-color: #2636be;
+        margin: 0.2em 0;
+        padding: 0.5em;
+        /* max-width: 70%; */
+        border-radius: 10px;
+        font-size: 16px;
+        color: #fff;
+    }
+
+    p {
+        margin: 0px;
+        padding: 0.2em;
+        border-radius: 10px;
+        font-size: 16px;
+        color: black;
+        text-align: right;
+    }
+}
+
+
+.youMedia {
+    align-self: flex-end;
+    display: inline-block;
+
+    //margin-right: 13px;
+    img {
+        height: 150px;
+        width: 150px;
+    }
+
+    h5 {
+        background-color: #2636be;
+        margin: 0.2em 0;
+        padding: 0.5em;
+        /* max-width: 70%; */
+        border-radius: 10px;
+        font-size: 16px;
+        color: #fff;
+    }
+
+    p {
+        margin: 0px;
+        padding: 0.2em;
+        border-radius: 10px;
+        font-size: 16px;
+        color: black;
+        text-align: right;
+    }
+}
+
+.meMedia {
+    align-self: flex-start;
+    color: black;
+
+    h5 {
+        background-color: #F1F0F0;
+        margin: 0.2em 0;
+        padding: 0.5em;
+        /* max-width: 70%; */
+        border-radius: 10px;
+        font-size: 16px;
+        color: black;
+    }
+
+    img {
+        height: 150px;
+        width: 150px;
+    }
+
+    p {
+        margin: 0px;
+        padding: 0.2em;
+        border-radius: 10px;
+        font-size: 16px;
+        color: black;
+        text-align: left;
+    }
+}
+
+.videoClass {
+    background-color: none;
+    border-radius: none;
+}
+
+.showTicks {
+    display: block;
+}
+
+.hideTicks {
+    display: none;
+}
+
+.imgSpan {
+    align-self: flex-end;
+    display: inline-block;
+    position: relative;
+    top: -15px;
+    left: 0px;
+}
+
+.chat_footer {
+    height: 80px;
+    padding: 2px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    ion-toolbar {
+        height: 80px;
+    }
+}
+
+.delete_img {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+
+
+
+@media only screen and (min-device-width: 414px) and (min-device-height: 896px) and (orientation : landscape) {
+
+    .chat_ui_page_content {
+        --padding-start: 30px !important;
+    }
+}

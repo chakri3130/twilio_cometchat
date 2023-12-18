@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'list-of-users',
+    loadChildren: () => import('./list-of-users/list-of-users.module').then( m => m.ListOfUsersPageModule)
+  },
+  {
+    path: 'chat-ui',
+    loadChildren: () => import('./chat-ui/chat-ui.module').then( m => m.ChatUiPageModule)
+  },
 ];
 
 @NgModule({
