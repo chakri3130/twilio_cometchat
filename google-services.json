@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "213835908096",
+    "project_id": "b2bus-cfb67",
+    "storage_bucket": "b2bus-cfb67.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:213835908096:android:a16ebf08aaeb62b94ec4e5",
+        "android_client_info": {
+          "package_name": "com.medleymed.b2bus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "213835908096-2c2afo8fitp8q5d9pg1tqlm03vm2a2vq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbzGzF_4LrkdTYDmGP8aPBq4CLq5kLZmk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "213835908096-2c2afo8fitp8q5d9pg1tqlm03vm2a2vq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "213835908096-4toevoqrj9v7h930ugsvnigcadd40i6e.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.medleymed.b2bus"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
